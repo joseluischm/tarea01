@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEYENDAS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c55541d6;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 80px;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 40px;
+            color: #fff;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+            text-align: justify;
+            padding: 0 20px;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            margin: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .overlay:target {
+            display: flex;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            text-decoration: none;
+        }
+
+        figcaption {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        figure {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LEYENDAS</h1>
+        <h2>LEYENDAS URBANAS DE LA CIUDAD DE LA PAZ</h2>
+        <p>
+            Monolito que Llora Bennett: En el Bosquesillo de Pura Pura, el Monolito que Llora Bennett es conocido por emitir un llanto desconsolado durante las noches de luna llena. La leyenda sostiene que este lamento proviene del espíritu de Bennett, un explorador que desapareció junto a su equipo tras desafiar una antigua maldición mientras buscaban un tesoro en el bosque. Sus almas quedaron atrapadas en el monolito, condenadas a llorar eternamente.
+            <br><br>
+            Lari Lari: El Lari Lari es un ser mítico que habita en el Bosquesillo de Pura Pura. Se dice que este guardián tiene la habilidad de manipular la realidad y atraer a los curiosos hacia el Monolito que Llora. Aquellos que caen bajo su influencia suelen experimentar visiones perturbadoras y fenómenos inexplicables, y pueden terminar perdidos en el bosque.
+            <br><br>
+            Duendes del Bosquesillo de Pura Pura: El Bosquesillo de Pura Pura también es hogar de traviesos duendes. Estos seres pequeños guían a los viajeros con luces engañosas y juegan bromas a quienes no respetan el bosque. Aunque algunos los consideran inofensivos, otros advierten que los duendes pueden ser peligrosos para quienes no conocen sus costumbres.
+            <br><br>
+            Calle Jaén: En la Ciudad de La Paz, la Calle Jaén es conocida por su proximidad al Monolito que Llora Bennett y al Bosquesillo de Pura Pura. Es un lugar asociado con fenómenos sobrenaturales y se considera un punto de acceso a los misterios del bosque. Los habitantes advierten a los curiosos sobre los peligros de explorar estos lugares en busca de lo desconocido.
+        </p>
+    </header>
+
+    <section>
+        <div class="galeria">
+            <figure>
+                <a href="#modal1">
+                    <img src="imagenes/bosque.jpg" alt="BOSQUE PURA PURA " class="imagen">
+                </a>
+                <center>  
+                    <figcaption>EL BOSQUE DE PURA PURA</figcaption> 
+                </center>
+            </figure>
+            <figure>
+                <a href="#modal2">
+                    <img src="imagenes/lari.jpg" alt="LARI LARI" class="imagen">
+                </a>
+                <center>  
+                    <figcaption>LARI LARI</figcaption> 
+                </center>
+            </figure>
+            <figure>
+                <a href="#modal3">
+                    <img src="imagenes/monolito.jpg" alt="MONOLITO" class="imagen">
+                </a>
+                <center>  
+                    <figcaption>MONOLITO BENNETT</figcaption> 
+                </center>
+            </figure>
+            <figure>
+                <a href="#modal4">
+                    <img src="imagenes/calle.jpg" alt="LA CALLE JAEN" class="imagen">
+                </a>
+                <center>  
+                    <figcaption>LA CALLE JAEN</figcaption> 
+                </center>
+            </figure>
+        </div>
+
+        <!-- Modales -->
+        <div id="modal1" class="overlay">
+            <a href="#" class="close">&times;</a>
+            <img src="imagenes/bosque.jpg" alt="bosque pura pura">
+        </div>
+
+        <div id="modal2" class="overlay">
+            <a href="#" class="close">&times;</a>
+            <img src="imagenes/lari.jpg" alt="lari lari">
+        </div>
+
+        <div id="modal3" class="overlay">
+            <a href="#" class="close">&times;</a>
+            <img src="imagenes/monolito.jpg" alt="monolito bennett">
+        </div>
+
+        <div id="modal4" class="overlay">
+            <a href="#" class="close">&times;</a>
+            <img src="imagenes/calle.jpg" alt="calle jaen">
+        </div>
+    </section>
+</body>
+</html>

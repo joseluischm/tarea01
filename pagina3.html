@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSICA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #219179d6;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 80px;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 40px;
+            color: #fff;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+            text-align: justify;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            margin: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .overlay:target {
+            display: flex;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            text-decoration: none;
+        }
+
+        figcaption {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        figure {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MUSICA</h1>
+        <h2>BANDAS DE ROCK DE LA CIUDAD DE LA PAZ</h2>
+        <p>
+            La ciudad de La Paz ha dado origen a importantes bandas de rock que han dejado su huella en la escena musical boliviana. Alcoholika destaca en el metal con su sonido oscuro y potente. Octavia fusiona rock alternativo con elementos andinos, siendo una de las más queridas en el país. Lou Kass, pionera en los 80, es conocida por su estilo experimental y poético. Dezsaire mezcla reggae y rock con un toque caribeño, aportando frescura a la escena. Estas bandas reflejan la diversidad y creatividad del rock paceño.
+        </p>
+    </header>
+
+    <section>
+        <div class="galeria">
+            <figure>
+                <a href="#modal1">
+                    <img src="imagenes/alcolica.jpg" alt="alcolica" class="imagen">
+                </a>
+                <figcaption>ALCOLICA</figcaption>
+            </figure>
+            <figure>
+                <a href="#modal2">
+                    <img src="imagenes/loukass.jpg" alt="loukass" class="imagen">
+                </a>
+                <figcaption>LOU KASS</figcaption>
+            </figure>
+            <figure>
+                <a href="#modal3">
+                    <img src="imagenes/octavia.jpg" alt="octavia" class="imagen">
+                </a>
+                <figcaption>OCTAVIA</figcaption>
+            </figure>
+            <figure>
+                <a href="#modal4">
+                    <img src="imagenes/dezsaire.jpg" alt="DEZSAIRE" class="imagen">
+                </a>
+                <figcaption>DEZSAIRE</figcaption>
+            </figure>
+        </div>
+
+        <!-- Modales -->
+        <div id="modal1" class="overlay">
+            <a href="#" class="close">&times;</a>
+            <img src="imagenes/alcolica.jpg" alt="alcolica">
+        </div>
+
+        <div id="modal2" class="overlay">
+            <a href="#" class="close">&times;</a>
+            <img src="imagenes/loukass.jpg" alt="lou kass">
+        </div>
+
+        <div id="modal3" class="overlay">
+            <a href="#" class="close">&times;</a>
+            <img src="imagenes/octavia.jpg" alt="octavia">
+        </div>
+
+        <div id="modal4" class="overlay">
+            <a href="#" class="close">&times;</a>
+            <img src="imagenes/dezsaire.jpg" alt="dezsaire">
+        </div>
+    </section>
+</body>
+</html>
